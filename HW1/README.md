@@ -13,12 +13,16 @@
 >cp /lib/x86_64-linux-gnu/libtinfo.so.6 testfolder/lib\
 >cp /lib/x86_64-linux-gnu/libc.so.6 testfolder/lib\
 >cp /lib64/ld-linux-x86-64.so.2 testfolder/lib64/\
->chroot testfolder\ 
+>chroot testfolder\
+
+![0](https://github.com/ssasergei/GeekBrains_Containerization/blob/master/HW1/screenshots/task0.jpg)
 ## Задание 1:
 
 > Продолжаем работу в командной строке. В частности - в той же папке.\
 > Добавьте в измененный корень команду, которая могла бы отображать путь к папке - команда ls. Вместе с зависимостями, чтобы она запускалась внутри “измененного корня”.\
 > Добавьте набор команд для вывода “корня”, чтобы убедиться, что вы действительно изолировали среду.
+
+![1](https://github.com/ssasergei/GeekBrains_Containerization/blob/master/HW1/screenshots/task1.jpg)
 
 ## Задание 2:
 
@@ -71,6 +75,10 @@
 
 > программу, которую вам надо запустить в некотором namespace - bash
 
+![2](https://github.com/ssasergei/GeekBrains_Containerization/blob/master/HW1/screenshots/task2.jpg)
+
 ## Задание 3:
 
 > После выполнения задачи выше попробуйте выполнить изоляцию процессов, файловой системы и сети(которая создастся при использовании unshare и нужного флага с нуля), используя команду unshare и необходимые флаги. И убедитесь, что это получилось, проверив командой ps -aux (Вы должны увидеть после изоляции пространства имен процессов  ограниченный список процессов, а не все процессы системы).
+
+![3](https://github.com/ssasergei/GeekBrains_Containerization/blob/master/HW1/screenshots/task3.jpg)
