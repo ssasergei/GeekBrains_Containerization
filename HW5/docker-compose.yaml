@@ -1,0 +1,36 @@
+version: '3'
+services:
+  web:
+    image: "akopkesheshyan/bitrix24:latest"
+    restart: always
+    ports:
+      - "8050:80"
+    cap_add:
+      - SYS_ADMIN 
+    security_opt:
+      - seccomp:unconfined
+    privileged: true
+    volumes:
+      - ./:/home/bitrix/www/local
+    depends_on:
+      - mysql
+  mysql:
+    image: mariadb
+    restart: always
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=11111 --execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 20s
+      retries: 10
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 11111
+      MYSQL_DATABASE: bitrix24
+      MYSQL_USER: bitrix
+      MYSQL_PASSWORD: 12345
+    command: ['--character-set-server=utf8', '--collation-server=utf8_unicode_ci', '--skip-character-set-client-handshake', '--sql-mode=']
+
+volumes:
+  bitrix24:
+  mysql:
