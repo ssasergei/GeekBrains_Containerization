@@ -1,7 +1,7 @@
 ##Задание 1:
 > Развернуть и запустить контейнер с любым вашим образом(сайт на CMS, образ ОС, образ базы данных, что угодно). Использовать строго Compose!
 > ### nano docker-compose.yaml
-![yaml](https://github.com/ssasergei/GeekBrains_Containerization/blob/master/HW5/docker-compose.yaml)
+[docker-compose.yaml](https://github.com/ssasergei/GeekBrains_Containerization/blob/master/HW5/docker-compose.yaml)
 > ### docker-compose up -d
 ![1](https://github.com/ssasergei/GeekBrains_Containerization/blob/master/HW5/screenshots/task1.jpg)
 
